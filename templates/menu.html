@@ -1,0 +1,12 @@
+{% extends 'base.html' %}{% block content %}
+
+<body>
+   <h1>Hi, {{ username }}</h1>
+   <p>Choose an option to proceed: </p>
+   <form>
+   <button formaction='/riddle_me_this' type='submit' id='menu_button_1'>Enter Game</button>
+   <button type='submit' id='menu_button_2'>View Top Scores</button>
+   <button type='submit' id='menu_button_3'>About Game</button>
+   </form>
+
+{% endblock %}

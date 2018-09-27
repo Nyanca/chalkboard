@@ -1,0 +1,20 @@
+{% extends 'base.html' %}{% block content %}
+
+   <h5>Player: {{ username }}</h5>
+   <p>Riddle Me This:</p>
+   
+   {% for riddle in riddle_list %}
+   <p>{{ riddle }}</p>
+   {% endfor %}
+   
+   <form action='{{url_for("check_answer")}}', method='POST'>
+       <label for='answer'></label>
+       <input type='text' id='answer' name='answer' placeholder='enter your guess' required='True'>
+       <button type='submit'>Guess</button>
+   </form>
+    
+    {% for a in answers %}
+    <p>{{ a }}</p>
+    {% endfor %}
+    
+{% endblock %}
