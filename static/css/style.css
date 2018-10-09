@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Homemade+Apple');
+@import url('https://fonts.googleapis.com/css?family=Krub');
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
+
+body {
+    background-color: white;
+}
+
+/*-------------------------------------------base*/
+
+/*.container{*/
+
+/*    height: 100%;*/
+
+/*    width: 100%;*/
+
+/*    padding:100px;*/
+
+/*}*/
+
+/*-------------------------------------------header*/
+
+.header-box {
+    border-bottom-style: groove;
+    border-bottom-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #C7C3C3;
+}
+
+.header-text {
+    font-family: 'Homemade Apple', cursive;
+    font-size: 32px;
+    color: white;
+}
+
+/*-------------------------------------------home-page*/
+
+.box {
+    background: url(/static/images/chalkboardHD.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 200px;
+    border-radius: 5px;
+}
+
+.p-text {
+    font-family: 'Krub', sans-serif;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.button {
+    background-color: #004A7F;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 20px;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-animation: glowing 1500ms infinite;
+    -moz-animation: glowing 1500ms infinite;
+    -o-animation: glowing 1500ms infinite;
+    animation: glowing 1500ms infinite;
+}
+
+@-webkit-keyframes glowing {
+    0% {
+        background-color: #4a1a6b;
+        -webkit-box-shadow: 0 0 3px #4a1a6b;
+    }
+    50% {
+        background-color: #9335ad;
+        -webkit-box-shadow: 0 0 40px #9335ad;
+    }
+    100% {
+        background-color: #4a1a6b;
+        -webkit-box-shadow: 0 0 3px #4a1a6b;
+    }
+}
+
+@-moz-keyframes glowing {
+    0% {
+        background-color: #4a1a6b;
+        -moz-box-shadow: 0 0 3px #4a1a6b;
+    }
+    50% {
+        background-color: #9335ad;
+        -moz-box-shadow: 0 0 40px #9335ad;
+    }
+    100% {
+        background-color: #4a1a6b;
+        -moz-box-shadow: 0 0 3px #4a1a6b;
+    }
+}
+
+@-o-keyframes glowing {
+    0% {
+        background-color: #4a1a6b;
+        box-shadow: 0 0 3px #4a1a6b;
+    }
+    50% {
+        background-color: #9335ad;
+        box-shadow: 0 0 40px #9335ad;
+    }
+    100% {
+        background-color: #4a1a6b;
+        box-shadow: 0 0 3px #4a1a6b;
+    }
+}
+
+@keyframes glowing {
+    0% {
+        background-color: #4a1a6b;
+        box-shadow: 0 0 3px #4a1a6b;
+    }
+    50% {
+        background-color: #9335ad;
+        box-shadow: 0 0 40px #9335ad;
+    }
+    100% {
+        background-color: #4a1a6b;
+        box-shadow: 0 0 3px #4a1a6b;
+    }
+}
+
+.center {
+    float: center;
+    padding: 10px;
+}
+
+.input {
+    border-radius: 10px;
+    text-align: center;
+}
+
+/*-------------------------------------------game*/
+
+.chalkboard {
+    background: url(/static/images/chalkboard.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 200px;
+    border-radius: 5px;
+}
+
+.username-style {}
+
+.chalkboard-text {
+    font-family: 'Fredericka the Great', cursive;
+    color: white;
+    text-align:center;
+}
+
+/*-------------------------------------------footer*/
+
+.footer {
+    background-color: #C7C3C3;
+    padding: 20px;
+}
+
+.footer-text {
+    font-family: 'Krub', sans-serif;
+    font-size: 7px;
+    padding-left: 10px;
+}
