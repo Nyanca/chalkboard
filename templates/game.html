@@ -1,20 +1,87 @@
 {% extends 'base.html' %}{% block content %}
 
-   <h5>Player: {{ username }}</h5>
-   <p>Riddle Me This:</p>
-   
-   {% for riddle in riddle_list %}
-   <p>{{ riddle }}</p>
-   {% endfor %}
-   
-   <form action='{{url_for("check_answer")}}', method='POST'>
-       <label for='answer'></label>
-       <input type='text' id='answer' name='answer' placeholder='enter your guess' required='True'>
-       <button type='submit'>Guess</button>
-   </form>
-    
-    {% for a in answers %}
-    <p>{{ a }}</p>
-    {% endfor %}
-    
+<!------------------------------------------user progress-->
+<!------------------------------------------out div wrapper-->
+<div class='row chalkboard_frame wrapper'>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <!------------------------------------------profile box div-->
+        <div class="row left-padding parent">
+            <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 child">
+                <div class="row p-text s-box" style='text-align:center;'>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <!------------------------------------------profile box content 1-->
+                        <div class="row icon20px">
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <i class="fas fa-user-secret"></i>
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                <h5>Player: {{ username | title }}</h5>
+                            </div>
+                        </div>
+                        <!------------------------------------------profile box content 2-->
+                        <div class="row icon20px">
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                <p>Your score is {{ score }} / {{ game_length }}</p>
+                            </div>
+                        </div>
+                        
+                         <!--get flashed messages for correct & incorrect answers-->
+                        {% with messages = get_flashed_messages() %} {% if messages %}
+                        <ul class='flashes p-text'>
+                            {% for message in messages %}
+                            {% if message == 'Correct Answer'%}
+                            <div class="row icon20px">
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                    <p>{{ message }}</p>
+                                </div>
+                            </div>
+                            {% elif message == 'Wrong Answer. Try Again' %}
+                            <div class="row icon20px">
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                    <i class="fas fa-times"></i>
+                                </div>
+                                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                    <p>{{ message }}</p>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                        {% endif %} {% endwith %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------------------------------------------game_play-->
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                {% if riddle_index
+                <=5 %} <h2 class='chalkboard-text'>{{ riddles[riddle_index]["riddle"] }}</h2>
+                    {% else %}
+                    <p class='chalkboard-text'>Game Over</p>
+                    {% endif %}
+            </div>
+        </div>
+        <div class='row top-padding'>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center-text">
+                    <form action='{{url_for("user", username=username)}}', method='POST'>
+                        <label for='answer'></label>
+                        <input class='input' type='text' id='answer' name='answer' placeholder='enter your guess' required='True'>
+                        <input type="hidden" name="riddle_index" id="riddle_index" value={{riddle_index}}>
+                        <input type="hidden" name="score" id="score" value={{score}}>
+                        <div class="center top-padding center-text">
+                            <button type='submit' class='button'>Guess</button>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
