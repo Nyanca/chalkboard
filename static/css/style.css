@@ -6,6 +6,11 @@ body {
     background-color: white;
 }
 
+body,
+html {
+    height: 100%;
+}
+
 /*-------------------------------------------base*/
 
 /*.container{*/
@@ -60,7 +65,9 @@ body {
 .button {
     background-color: #004A7F;
     -webkit-border-radius: 10px;
-    border-radius: 10px;
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
     border: none;
     color: #FFFFFF;
     cursor: pointer;
@@ -78,67 +85,73 @@ body {
 
 @-webkit-keyframes glowing {
     0% {
-        background-color: #4a1a6b;
-        -webkit-box-shadow: 0 0 3px #4a1a6b;
+        background-color: black;
+        -webkit-box-shadow: 0 0 3px #FCFDF1;
     }
     50% {
-        background-color: #9335ad;
-        -webkit-box-shadow: 0 0 40px #9335ad;
+        background-color: black;
+        -webkit-box-shadow: 0 0 40px white;
     }
     100% {
-        background-color: #4a1a6b;
-        -webkit-box-shadow: 0 0 3px #4a1a6b;
+        background-color: black;
+        -webkit-box-shadow: 0 0 3px #FCFDF1;
     }
 }
 
 @-moz-keyframes glowing {
     0% {
-        background-color: #4a1a6b;
-        -moz-box-shadow: 0 0 3px #4a1a6b;
+        background-color: black;
+        -moz-box-shadow: 0 0 3px #FCFDF1;
     }
     50% {
-        background-color: #9335ad;
-        -moz-box-shadow: 0 0 40px #9335ad;
+        background-color: black;
+        -moz-box-shadow: 0 0 40px white;
     }
     100% {
-        background-color: #4a1a6b;
-        -moz-box-shadow: 0 0 3px #4a1a6b;
+        background-color: black;
+        -moz-box-shadow: 0 0 3px #FCFDF1;
     }
 }
 
 @-o-keyframes glowing {
     0% {
-        background-color: #4a1a6b;
-        box-shadow: 0 0 3px #4a1a6b;
+        background-color: black;
+        box-shadow: 0 0 3px #FCFDF1;
     }
     50% {
-        background-color: #9335ad;
-        box-shadow: 0 0 40px #9335ad;
+        background-color: black;
+        box-shadow: 0 0 40px white;
     }
     100% {
-        background-color: #4a1a6b;
-        box-shadow: 0 0 3px #4a1a6b;
+        background-color: black;
+        box-shadow: 0 0 3px #FCFDF1;
     }
 }
 
 @keyframes glowing {
     0% {
-        background-color: #4a1a6b;
-        box-shadow: 0 0 3px #4a1a6b;
+        background-color: black;
+        box-shadow: 0 0 3px #FCFDF1;
     }
     50% {
-        background-color: #9335ad;
-        box-shadow: 0 0 40px #9335ad;
+        background-color: black;
+        box-shadow: 0 0 40px white;
     }
     100% {
-        background-color: #4a1a6b;
-        box-shadow: 0 0 3px #4a1a6b;
+        background-color: black;
+        box-shadow: 0 0 3px #FCFDF1;
     }
 }
 
-.center {
-    float: center;
-    padding: 10px;
+.center-block-row {
+    text-align: center;
+}
+
+.center-block-col {
+    display: inline-block;
+    float: None;
+    margin-right: -4px;
+    text-align: center;
 }
 
 .input {
@@ -148,26 +161,76 @@ body {
 
 /*-------------------------------------------game*/
 
-.chalkboard {
-    background: url(/static/images/chalkboard.jpg) no-repeat center center fixed;
+.s-box {
+    border-style: groove;
+    border-color: white;
+}
+
+.chalkboard_frame {
+    background: url(/static/images/chalkboard_frame.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
     display: flex;
+    min-height: 1000px;
+    margin-top: 20px;
     align-items: center;
-    margin: 10px;
-    padding: 200px;
     border-radius: 5px;
 }
+
+.chalkboard-text {
+    font-family: 'Fredericka the Great', cursive;
+    color: white;
+    text-align: center;
+}
+
+/*-------------------------------------------special paddings, margins, alignments & styles*/
+
+.top-padding {
+    padding-top: 20px;
+}
+
+.left-padding {
+    padding-left: 20px;
+}
+
+.right-padding {
+    padding-right: 20px;
+}
+
+.wrapper{
+    position: relative;
+    width:100%;
+}
+
+.parent{
+    position: absolute;
+}
+
+.child{
+    position: fixed;
+}
+
+.center-text {
+    text-align:center;
+}
+
+.no-decoration a{
+    text-decoration: none;
+}
+
+.icon20px i {
+    font-size: 20px;
+}
+/*-------------------------------------------gameover file*/
 
 .username-style {}
 
 .chalkboard-text {
     font-family: 'Fredericka the Great', cursive;
     color: white;
-    text-align:center;
+    text-align: center;
 }
 
 /*-------------------------------------------footer*/
@@ -182,3 +245,7 @@ body {
     font-size: 7px;
     padding-left: 10px;
 }
+
+
+/*-------------------------------------------media queries*/
+
