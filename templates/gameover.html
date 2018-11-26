@@ -1,0 +1,43 @@
+{% extends 'base.html' %}{% block content %}
+
+<!--display game over & menu option buttons-->
+<section>
+
+    <!--display chalkboard with user message, game-over message & leaderboard-->
+    <div class="row chalkboard_frame">
+        <!--gameover message-->
+        <div class="col-xs-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="row">
+                <div class="col-xs-12 col-md-12 col-lg-12 col-xl-12">
+                    <h1 class='chalkboard-text'>GAME OVER!</h1>
+                </div>
+            </div>
+            <!--leaderboard display-->
+            <br>
+            <div class="row s-box">
+                <div class="col-xs-12 col-md-12 col-lg-12 col-xl-12 p-text">
+                    <p class="chalkboard-text">Top Scores</p>
+                    {% for player in leaderboard [:5] %} {{ player }}
+                    <!--<hr>-->
+                    <br> {% endfor %}
+                </div>
+            </div>
+            <!--user message & score-->
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-xl-12">
+                    <p class='p-text'>Thanks for playing {{ username }}<br><strong>Your score is {{ score }} / {{ game_length }}</strong></p>
+                </div>
+            </div>
+
+            <!--nav buttons-->
+            <div class="row center-block-row center-text p-text no-decoration">
+                <div class="col-xs-5 col-md-3 col-lg-3 center-block-col">
+                    <button class='button no-decoration'><a href= "/">Play Again</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
