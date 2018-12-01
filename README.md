@@ -30,9 +30,13 @@ I therefore decided to center the game around a chalkboard image, and provide us
 
 # TECH USED
 This project features my first use of Python https://www.python.org/
+
 HTML & CSS are also used for layout and design.
+
 Bootstrap Grid System offers responsive layout for design. https://getbootstrap.com/ 
+
 Font Awesome provides lovely icons https://fontawesome.com/
+
 The framework used is the popular micro framework Flask http://flask.pocoo.org/docs/1.0/
 
 # TESTING 
@@ -76,7 +80,7 @@ To run the test file from the command line:
 
     python3 -m unittest test_run.py
     
-Using this framework, I executed tests to ensure that all routes and pages are loading as expected. Which they did. 
+Using this framework, I executed tests to ensure that all routes and pages were loading as expected. Which they did. 
 
 I then set up a class to test write and append features as such: 
 
@@ -95,7 +99,7 @@ I then set up a class to test write and append features as such:
         
         print("setUpClass - TestFileReadAppend")
 
-From here, I was able to test write and append operations aswell as to test the data going into and being retrieved from the json file. 
+From here, I was able to test write and append operations aswell as to test the data going into and being retrieved from the json file. The tests provided the expected results for the features tested. More extensive testing is however required, but for now, I'm a novice tester with much more to learn! 
 
 # Deployment 
 
