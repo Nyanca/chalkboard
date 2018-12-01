@@ -1,18 +1,35 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html'%} {% block content %}
 
-<head>
-    <title>Home Page</title>
-</head>
+<header class="header-box header-text">
+        <h3>Chalkboard</h3>
+        <h4>guessing game</h4>
+</header>
+    
+<div class="row box">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class='row'>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <p class='p-text'><strong>CREATE A UNIQUE USERNAME FOR YOUR PLAYER</p></strong>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <form method='POST' class='p-text'>
+                    <label for='username'></label>
+                    <input class='input' type='text' placeholder='username' id='username' name='username' required='True'>
+                    <div class='center top-padding'><a href='{{ url_for ("user", username=username) }}'><button class='button'>Enter Game</button></a></div>
+                </form>
+            </div> 
+        </div>
+    </div>
+</div>
 
-<body>
-    <p>Create a unique username for your player</p>
-    <form method='POST'>
-        <label for='username'>Username:</label>
-        <input type='text' id='username' name='username' required='True'>
-        <button>Enter Game</button>
-    </form>
+    <footer class='footer'>
+        <div class='row'>
+            <div class='col-6'>
+                <p class='footer-text'>play to play</p>
+            </div>
+        </div>
+    </footer>  
 
-</body>
-
-</html>
+{% endblock %}

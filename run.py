@@ -7,24 +7,6 @@ from flask.json import jsonify
 app = Flask(__name__)
 app.secret_key = 'ffb8574786f724d0ca95698772955a65'
 
-# def leaderboard():
-#     with open('data/online_players.json', 'w') as outfile:
-#         json.dump(data, outfile)
-    
-    
-# score function to build below
-# def score_count(answer):
-#     count = 0
-  
-#     for a in answer:
-#         if a.correct_answer():
-#             count += 1
-#         return count
-
-# def show_score():
-    
-#      print ('Your score is {0} / {1}'.format(score, number_of_questions))
-
 # def game_motivators(questions_and_answers, score):
 #     #print statements to validate player success on high score
 #     for answer in score:
@@ -87,8 +69,7 @@ def user(username):
     
     # write username & score to leaderboard file at game-over
     # redirect to gameover.html
-    # currently this function overwrites past writes: FIX NEEDED
-    
+
     if request.method == 'POST':
         # amend this for a more dynamic game
         if correct_answer == 'a bookkeeper':
