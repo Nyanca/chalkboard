@@ -16,19 +16,19 @@ I therefore decided to center the game around a chalkboard image, and provide us
 
 ## FEATURES
 
-# features implemented
+### features implemented
 
     1) Users can access the game by providing a username which is logged in a txt file. 
     2) Upon supplying a username, user's must guess the answer to a series of riddles. If they guess incorrectly, they are returned to the same riddle and informed that they supplied the wrong answer. If they guess correctly they are returned to the next riddle and their score is incremented by one. 
     3) After reaching the end of the game, they are returned to the game over page, where they are shown a leaderboard with top 5 highest scores. 
     4) Users can then choose to 'play again' if they are feeling competitive.
 
-# features-to-be-implemented
+### features-to-be-implemented
 
     1) The riddle questions are stored in a json file. The game displays all riddles in this file. With more time I would work on a feature that shuffles the order of the riddles, so that each instance of the game is different. I would then add more riddles than the 6 provided to make the most of this feature.
     2) I would create an if statement with flash messages to provide motivational statements at particular scores e.g score == 3, 'not bad', score == 5 'you're pretty good at this'
 
-# TECH USED
+## TECH USED
 This project features my first use of Python https://www.python.org/
 
 HTML & CSS are also used for layout and design.
@@ -39,9 +39,9 @@ Font Awesome provides lovely icons https://fontawesome.com/
 
 The framework used is the popular micro framework Flask http://flask.pocoo.org/docs/1.0/
 
-# TESTING 
+## TESTING 
 
-# Manual Testing: 
+### Manual Testing: 
 
 Here's an example scenario used in the manual testing phase of this project: 
 
@@ -58,7 +58,7 @@ While the game is largely responsive, the riddles need to be repositioned by scr
 
 Iphone 5 and lower screen dimensions will not get the optimal style of this game which is an issue that needs to be addressed.  
 
-# Unittest testing: 
+### Unittest testing: 
 
 The testing framework used in this project is the standard library unittest. 
 
@@ -101,14 +101,14 @@ I then set up a class to test write and append features as such:
 
 From here, I was able to test write and append operations aswell as to test the data going into and being retrieved from the json file. The tests provided the expected results for the features tested. More extensive testing is however required, but for now, I'm a novice tester with much more to learn! 
 
-# Deployment 
+## Deployment 
 
-# Credits 
-# content
+## Credits 
+### content
 Riddles taken from https://riddlesbrainteasers.com 
 
-# media 
+### media 
 All images used in this project are open souce and available for commercial usage. 
 
-# acknowledgements 
+### acknowledgements 
 Thanks to CI Dublin 
