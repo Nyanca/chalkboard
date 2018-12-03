@@ -1,5 +1,6 @@
 
 ## RIDDLE-ME-THIS multi-player game app
+Live Demo: https://chalkboard-riddles.herokuapp.com/
 
 This project has been developed as part of CI Dublin's coding bootcamp for software developers following modules in HTML, CSS, User Centric Frontend Dev, Javascript Fundamentals, Interactive Frontend Dev, Python Fundamentals and Practical Python. 
 
@@ -102,6 +103,8 @@ I then set up a class to test write and append features as such:
 From here, I was able to test write and append operations aswell as to test the data going into and being retrieved from the json file. The tests provided the expected results for the features tested. More extensive testing is however required, but for now, I'm a novice tester with much more to learn! 
 
 ## Deployment 
+Deployment via Heroku linked to github, with automatic deploys & builds upon changes to Github
+https://www.heroku.com/
 
 ## Credits 
 ### content
