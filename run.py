@@ -71,10 +71,9 @@ def user(username):
     # redirect to gameover.html
 
     if request.method == 'POST':
-        # amend this for a more dynamic game
         if correct_answer == 'a bookkeeper':
             with open('data/leaderboard.txt', 'a') as leaderboard:
-                leaderboard.writelines('%s : %d' %(username, score) + '\n')
+                leaderboard.writelines('score: %d, username: %s' %(score, username) + '\n')
                 
                 leaderboard_file = open('data/leaderboard.txt', 'r') 
                 leaderboard = leaderboard_file.readlines()

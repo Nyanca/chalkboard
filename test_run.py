@@ -106,17 +106,17 @@ class TestReadAppend(unittest.TestCase):
         self.assertEqual(riddle, 'a riddle question')
         print("test_key_matches_value-- PASS")
 
-class testCounters(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls): 
-        print("setUpClass - TestCounters")
+# class testCounters(unittest.TestCase):
+#     @classmethod
+#     def setUpClass(cls): 
+#         print("setUpClass - TestCounters")
 
-    @classmethod
-    def tearDownClass(cls):
-        print("tearDownClass - TestCounters")
+#     @classmethod
+#     def tearDownClass(cls):
+#         print("tearDownClass - TestCounters")
     
-    def test_score_incrementation(self):
-        print('test_score_incrementation-- PASS')
+#     def test_score_incrementation(self):
+#         print('test_score_incrementation-- PASS')
         
 if __name__ == "__main__":
     unittest.main()

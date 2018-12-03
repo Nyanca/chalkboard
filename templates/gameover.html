@@ -17,7 +17,7 @@
             <div class="row s-box">
                 <div class="col-xs-12 col-md-12 col-lg-12 col-xl-12 p-text">
                     <p class="chalkboard-text">Top Scores</p>
-                    {% for player in leaderboard [:5] %} {{ player }}
+                    {% for player in leaderboard [:5] | sort(reverse=True) %} {{ player }}
                     <!--<hr>-->
                     <br> {% endfor %}
                 </div>

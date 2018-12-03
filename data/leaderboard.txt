@@ -1,36 +1,8 @@
-nianca : 1
-graham : 4
-jerry : 3
-bob : 5
-sity : 3
-fader : 2
-admin : 1
-gameover.html : 1
-admin : 1
-admin : 1
-blip : 1
-admin : 6
-admin : 6
-admin : 6
-admin : 6
-admin : 6
-admin : 6
-admin : 6
-admin : 6
-admin : 6
-admin : 6
-admin : 6
-admin : 6
-admin : 6
-admin : 6
-admin : 6
-admin : 6
-admin : 6
-admin : 6
-admin : 6
-admin : 6
-admin : 6
-admin : 6
-admin : 6
-blip : 6
-nianca : 6
+score: 5, username: bill 
+score: 6, username: nianca
+score: 6, username: nianca
+score: 3, username: Gerry
+score: 2, username: Bob
+score: 5, username: Jennifer
+score: 6, username: nianca
+score: 6, username: nianca
