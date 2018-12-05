@@ -24,15 +24,6 @@ html {
 /*}*/
 
 /*-------------------------------------------header*/
-
-.header-box {
-    border-bottom-style: groove;
-    border-bottom-color: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: white;
-}
-
 .header-text {
     font-family: 'Homemade Apple', cursive;
     color: #A9A9A9;
