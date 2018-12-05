@@ -78,7 +78,7 @@ def user(username):
                 leaderboard_file = open('data/leaderboard.txt', 'r') 
                 leaderboard = leaderboard_file.readlines()
                 
-            return render_template('gameover.html', username=username, score=score, game_length=game_length, leaderboard=leaderboard)
+            return render_template('gameover.html', username=username, score=score, game_length=game_length,leaderboard=leaderboard)
 
     return render_template('game.html', username=username, score=score, riddles=riddles, riddle_index=riddle_index, number_of_riddles=number_of_riddles, game_length=game_length)
 

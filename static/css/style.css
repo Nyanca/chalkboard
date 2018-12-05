@@ -30,13 +30,12 @@ html {
     border-bottom-color: white;
     padding: 20px;
     margin-bottom: 20px;
-    background-color: #C7C3C3;
+    background-color: white;
 }
 
 .header-text {
     font-family: 'Homemade Apple', cursive;
-    font-size: 32px;
-    color: white;
+    color: #A9A9A9;
 }
 
 /*-------------------------------------------home-page*/
@@ -236,14 +235,15 @@ html {
 /*-------------------------------------------footer*/
 
 .footer {
-    background-color: #C7C3C3;
+    background-color: white;
     padding: 20px;
 }
 
 .footer-text {
     font-family: 'Krub', sans-serif;
-    font-size: 7px;
+    font-size: 12px;
     padding-left: 10px;
+    color: #A9A9A9;
 }
 
 
